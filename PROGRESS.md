@@ -13,10 +13,13 @@
 - 浏览器：Google Chrome.app、ego lite.app（Ego-Browser）
 - 依赖锁定：vite 8.3.6 / typescript 7.0.2 / pixi.js 8.22.0 / react 19.3.1 / vitest 5.1.0 / @vitejs/plugin-react 6.2.1
 
-## GitHub 交付计划
-- 拟用仓库名：**ecobox**（首选）；若被占用或属于其他项目则用 `ecobox-alife` 或带时间后缀名称，绝不覆盖旧仓库
-- 创建命令（计划）：`gh repo create ecobox --private --source=. --remote=origin --push`
-- 状态：未开始
+## GitHub 交付（已完成）
+- 仓库：**https://github.com/kiva-9/ecobox**（PRIVATE，默认分支 main，属主 kiva-9）
+- 创建命令：`gh repo create ecobox --private --source=. --remote=origin --push`
+- 最终提交：**2c3c1ec36b9fdfb473c698d2e6d985297f39a1fa**（本地 HEAD = 远端 main = 验收克隆 HEAD）
+- 干净克隆验收（/tmp/ecobox-clone）：SHA 一致 → `npm ci` → `npm run typecheck` 通过 → `npm test` 35/35 通过 →
+  `npm run build` 通过（sim.worker 产物齐全）→ `vite preview` 服务 → 浏览器冒烟（创建世界、模拟运行、tick 249、220 个体）
+- 验收截图：screenshots/26-clean-clone.png
 
 ## 已完成
 - [x] 环境预检（Node/npm/git/gh/浏览器/网络）
