@@ -159,7 +159,14 @@ npx vite-node scripts/batch-sim.ts --seeds 4 --ticks 30000 --preset arid --seedB
 
 截图见 `screenshots/` 目录（01–24，含主菜单、运行世界、个体面板、谱系视图、数据面板、挑战简报/运行/进度/失败/重试、存档界面、导入导出、引导、帮助、设置、性能测试）。
 
-## 9. 复现命令速查
+## 9. GitHub Pages 在线验收
+
+- 部署方式：`.github/workflows/deploy.yml`（push main 自动构建部署；`ECOOX_BASE=/ecobox/` 项目页基础路径已在构建产物中验证）
+- 在线地址：**https://kiva-9.github.io/ecobox/**（HTTP 200）
+- 浏览器实测（ego-lite）：页面加载 → 创建世界 → 模拟运行（tick 294、222 个体）、Web Worker 与 PixiJS 渲染均正常，截图 `screenshots/28-github-pages.png`
+- 仓库可见性：public（用户确认后由 private 调整，因免费方案下私有仓库不支持 Pages）
+
+## 10. 复现命令速查
 
 ```bash
 npm test                                    # 35 项核心测试
